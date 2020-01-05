@@ -1,0 +1,169 @@
+.section-contain{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    &__box{
+        h2{
+            font-size: 3.4rem;
+        }
+        .date{
+            font-size: 1.4rem;
+            color: #4c4c4c;
+            font-style: italic;
+        }
+        .news-contrain{
+            .title-new{
+                margin-bottom: 10px;
+            }
+            .contain-news{
+                font-size: 1.4rem;
+                line-height: 2;
+            }
+            .img-title{
+                font-style: italic;
+                font-size: 1.2rem;
+            }
+        }
+    }
+    &__news{
+        padding: 20px;
+        &--heading{
+            text-align: center;
+            .main-text{
+                font-size: 2.5rem;
+                font-weight: bolder;
+                animation-name: annimationchude;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+                // transition: all 0.5s;
+                &:hover{
+                    color: $color-primary-light;
+                }
+            }
+        }
+        &--contain{
+            padding: 10px;
+            border: 1px solid $color-primary-light;
+            // &:hover{
+            //     border: 1px solid $color-primary-light;
+            // }
+            .list-group{
+                list-style-type: circle;
+            }
+            a{
+                text-decoration: none;
+                font-size: 1.6rem;
+                color: #000;
+            }
+            .list-group-item{
+                transition: all 0.5s ease-in-out;
+            }
+            .list-group-item:hover {
+                background-color: $color-primary-light;
+            }
+            .list-group-item:hover a{
+                color: #fff;
+            }
+        }
+
+    }
+    @keyframes annimationchude{
+        50%{
+            color: $color-primary;
+        }
+        100%{
+            color: #000;
+        }
+    }
+}
+
+
+
+
+// ==================================Liên Hệ CSS
+.LienHe-main{
+    margin-top: 30px;
+    &--text{
+        font-size: 3rem;
+    }
+    &__Phongban{
+        .img-area{
+            margin-top: 10px;
+            margin-right: 40px;
+            width: 200px;
+            height: 200px;
+        }
+        .info-PhongBan{
+            font-size: 1.6rem;
+            h3{
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+            &__icon{
+                margin-right: 10px;
+                font-size: 2rem;
+            }
+            &__text{
+                p{
+                    margin-bottom: 5px;
+                }
+                &--primary{
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+    &__form-text{
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+        color: #333;
+        .form-thongtin{
+            margin-top: 10px;
+            &__input{
+                margin: 10px auto;
+                font-size: 1.4rem;
+                padding-left: 10px;
+            }
+            .btn{
+                font-size: 1.8rem;
+                padding: 10px 30px;
+                border-radius: 6px;
+            }
+            .thongbao-text{
+                font-size: 1.2rem;
+                color: red;
+                margin-top: -10px;
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+//===================================Nội Quy===========
+.noiQuy-area{
+    margin: 40px auto;
+    .header-box{
+        &__text-main{
+            font-size: 3rem;
+            padding-bottom: 30px;
+        }
+    }
+    &__main{
+        font-size: 1.6rem;
+
+        .tab-content{
+            border: 1px solid rgba(0,0,0,0.123);
+            padding: 10px;
+            margin-top: 10px;
+            text-align: justify;
+        }
+        &--download{
+            margin-top: 10px;
+            font-size: 1.6rem;
+            .btn-download{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

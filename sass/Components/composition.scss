@@ -1,0 +1,80 @@
+.composition {
+  position: relative;
+  &__photo {
+    width: 50%;
+    box-shadow: 0 1.5rem 4rem rgba(70, 64, 64, 0.4);
+    border-radius: 0.2rem;
+    position: absolute;
+    z-index: 10;
+    outline-offset: 1rem;
+    transition: all 0.2s;
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+
+    &--p2 {
+      right: 2rem;
+      top: 2rem;
+    }
+
+    &--p3 {
+      left: 10%;
+      top: 10rem;
+    }
+
+    // &:hover{
+    //   outline: 1.5rem solid #f13327;
+    //   transform: scale(1.05);
+    //   box-shadow: 0 2.5rem 4rem rgba(#000, 0.5);
+    //   z-index: 15;
+    //   filter: brightness(55%) blur(1px);
+    // }
+  }
+  &__photoarea:hover &__photo{
+    outline: 1.5rem solid #d84b4be7;
+    transform: scale(1.05);
+    box-shadow: 0 2.5rem 4rem rgba(70, 64, 64, 0.5);
+    z-index: 15;
+    filter: brightness(75%) blur(0.5px);
+  }
+
+
+  &__news {
+    z-index: 5;
+    position: absolute;
+    color: #fff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    transition: all 1s;
+    width: 40%;
+    text-align: center;
+    &--p1 {
+      left: 25%;
+      top: 6rem;
+    }
+
+    &--p2 {
+      right: -10%;
+      top: 10rem;
+    }
+
+    &--p3 {
+      left: 35%;
+      top: 18rem;
+    }
+  }
+  &__photoarea:hover &__news{
+    transform: translate(-50%, -50%);
+    z-index: 25;
+    opacity: 1;
+  }
+  // &__photo:hover ~ &__news,
+  // &__photo:active ~ &__news{
+  //   transform: translate(-50%,-50%);
+  //   z-index: 25;
+  //   opacity: 1;
+  // }
+}

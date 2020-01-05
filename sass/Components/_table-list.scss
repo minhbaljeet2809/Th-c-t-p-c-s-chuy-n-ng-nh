@@ -1,0 +1,29 @@
+.list-table{
+    margin: 50px auto;
+    .text-primary{
+        h2{
+            color: $color-primary;
+            font-size: 3.2rem;
+            padding-bottom: 40px;
+        }
+    }
+    &__contain{
+        font-size: 1.6rem;
+    }
+}
+
+.table-contain{
+    font-size: 1.6rem;
+    thead tr th{
+        text-align: center;
+    }
+    .name{
+        text-align: left;
+    }
+    tbody tr td{
+        text-align: center;
+    }
+    tbody tr:hover{
+        background-color: #f7f6f6;
+    }
+}

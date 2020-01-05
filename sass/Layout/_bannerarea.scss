@@ -1,0 +1,30 @@
+.banner-area {
+  background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.432), rgba(28, 62, 255, 0.349)),
+    url("../img/login_BG.png");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-top: 122px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 400px;
+
+  -webkit-clip-path: ellipse(65% 51% at 48% 30%);
+  clip-path: ellipse(65% 51% at 48% 30%);
+  &__textbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-primary {
+    color: #fff;
+    text-transform: uppercase;
+    &__main {
+      display: block;
+      font-size: 62px;
+      font-weight: 400;
+      letter-spacing: 15px;
+    }
+  }
+}

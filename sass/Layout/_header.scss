@@ -1,0 +1,130 @@
+.header-area {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: background 0.4s, all 0.3s linear;
+  font-size: 1.4rem;
+  a {
+    color: $color-header;
+    text-decoration: none;
+    line-height: 42px;
+    transition: all 300ms linear 0s;
+  }
+  &-top {
+    background: #f9f9ff;
+    display: flex;
+    &__left {
+      float: left !important;
+    }
+    &__left-list {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      display: inline;
+      li {
+        display: inline-block;
+        margin-right: 15px;
+      }
+    }
+    &__right {
+      float: right !important;
+      > a {
+        margin-left: 30px;
+      }
+      &--dropdown.show{
+        left: -115px !important;
+        a{
+          font-size: 1.4rem;
+        }
+      }
+      &--textright:hover, &--textright + a:hover{
+        color:$color-primary;
+      }
+      
+    }
+  }
+  &-bot {
+    .navbar {
+      background: transparent;
+      padding: 0px;
+      border: 0px;
+      border-radius: 0px;
+      margin-top: 10px;
+
+      .navbar-brand {
+        padding: 0px;
+        img {
+          height: 150px;
+        }
+        .img-size {
+          height: 70px;
+        }
+      }
+      .nav {
+        .nav-item {
+          margin-right: 20px;
+          margin-left: 10px;
+          .nav-link {
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            padding: 0px;
+            color: #fff;
+          }
+        }
+        .nav-item.active {
+          .nav-link {
+            color: $color-primary;
+          }
+        }
+        .nav-item:last-child {
+          margin-right: 0px;
+        }
+        .nav-item.submenu ul {
+          position: absolute;
+          top: 120%;
+          left: 0px;
+          min-width: 200px;
+          text-align: left;
+          opacity: 0;
+          transition: all 300ms ease-in;
+          visibility: hidden;
+          display: block;
+          border: none;
+          padding: 0px;
+          border-radius: 0px;
+          background-color: rgba(66, 132, 231, 0.534);
+        }
+        .nav-item.submenu:hover ul {
+          visibility: visible;
+          opacity: 1;
+          top: 100%;
+        }
+
+        .nav-iteam.submenu:hover .dropdown-menu .nav-item .nav-link{
+          color:#fff;
+        }
+      }
+      .nav-color-black {
+         .nav-item {
+          .nav-link {
+            font-size: 1.6rem;
+            color: #000;
+          }
+        }
+        .nav-item.submenu ul{
+          background-color:#fff;
+        }
+      }
+    }
+  }
+  & + section {
+    margin-top: 42px;
+  }
+  & + div {
+    margin-top: 120px;
+  }
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bb5e62a986.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+ 
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Trang Chủ | Thống Kê | Nhân Sự</title>
+</head>
+
+<body>
+    <!-- ==========LOGOUT============= -->
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <div class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">INFO-ACC</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">LOGOUT</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- ==========END LOGOUT============= -->
+    <!-- =========HEADER MENU AREA================= -->
+    <header class="header-area">
+        <div class="header-area-top">
+            <div class="container">
+                <div class="header-area-top__left">
+                    <ul class="header-area-top__left-list">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="far fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <div class="header-area-top__right">
+                    <a href="#" class="header-area-top__right--textleft ">Admin</a>
+                    <a href="#" class="header-area-top__right--textright ">admin@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-area-bot">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="index.html"><img src="./img/Logobar1.png" alt=""
+                            class="img-size"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto nav-color-black">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                            <li class="nav-item submenu dropdown"><a class="nav-link dropdown-toggle" href="#"
+                                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giới
+                                    Thiệu</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="#">Lịch Sử</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nội Quy</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Phòng Ban</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="#">Phòng Tài Chính</a>
+                                    <li class="nav-item"><a class="nav-link" href="#">Phòng Kế Toán</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Khoa</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="#">Khoa CNTT</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Khoa ATTT</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Khoa ĐTVT</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Thống Kê</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#">Liên Hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- ================END HEADER MENU AREA=================== -->
+    <!-- ========================BRREADCRUMB-AREA===================== -->
+    <div class="breadcrumb-area">
+        <div class="breadcrumb-area__flex d-flex ">
+            <div class="breadcrumb-area__background"></div>
+            <div class="container">
+                <div class="breadcrumb-area__contain text-center">
+                    <h2 class="">Thống Kê</h2>
+                    <div class="breadcrumb-area__contain--link">
+                        <a href="#">Trang chủ</a>
+                        <a href="#">Thống Kê</a>
+                        <a href="#">Danh Sách</a>
+                        <a href="#">Chi Tiết Nhân Sự</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========================END BRREADCRUMB-AREA===================== -->
+    <!-- ==================staff-info================================== -->
+    <section class="staff-info">
+        <div class="container">
+            <div class="staff-info--primary_text text-center">
+                <h2>Thông Tin Nhân Viên</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="staff-info--img text-center">
+                        <img src="./img/team-img2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="staff-info__impor">
+                        <table class="info-table table">
+                            <tr class="info-table__row">
+                                <th class="info-table__col-left">Họ Và tên</th>
+                                <th class="info-table__col-right">Nguyễn Thị Rất Xinh</th>
+                            </tr>
+                            <tr>
+                                <th class="info-table__col-left">Giới Tính</th>
+                                <th class="info-table__col-right">Bê đê</th class="info-table__col-right">
+                            </tr>
+                            <tr>
+                                <th class="info-table__col-left">Ngày Sinh</th>
+                                <th class="info-table__col-right">1/04/2020</th>
+                            </tr>
+                            <tr>
+                                <th class="info-table__col-left">Email</th>
+                                <th class="info-table__col-right">nguyenthilunglinh@gmail.com</th>
+                            </tr>
+                            <tr>
+                                <th class="info-table__col-left">Chức vụ</th>
+                                <th class="info-table__col-right">Nguyễn Thị Rất Xinh</th>
+                            </tr>
+                            <tr>
+                                <th class="info-table__col-left">Hệ số lương</th>
+                                <th class="info-table__col-right">1.6</th>
+                            </tr>
+                            <tr>
+                                <th class="info-table__col-left">Đơn vị</th>
+                                <th class="info-table__col-right">Phòng nào đó</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================End staff-info================================== -->
+    <!-- ===============================BIỂU ĐỒ NHÂN SỰ============================ -->
+    <div class="bieuDoTK-contain">
+        <div class="container">
+            <div class="bieuDoTK-contain__title-text text-center">
+                <h2>Thống Kê</h2>
+                <div class="input-area">
+                    <div class="input-group mb-3">
+                        <input type="month" class="form-control" placeholder="" aria-label="Example text with button addon"
+                            aria-describedby="button-addon1">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bieuDoTK__main">
+                <div id="Test" class="TestChartjs">
+                </div>
+                <div class="bieuDoTK__Sub d-flex">
+                    <div class="bieuDoTK__Sub--ontime">
+                        <div class="d-flex">
+                            <div class="color-d">
+                            </div>
+                            <span>Đi làm đúng giờ</span>
+                        </div>
+                    </div>
+                    <div class=" bieuDoTK__Sub--relative bieuDoTK__Sub--late">
+                        <div class="d-flex">
+                            <div class="color-d">
+                            </div>
+                            <span> Đi làm muộn</span>
+                        </div>
+                        <div class="bieuDoTK__Sub--list-date">
+                            <ul>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bieuDoTK__Sub--relative  bieuDoTK__Sub--off">
+                        <div class="d-flex">
+                            <div class="color-d">
+                            </div>
+                            <span> Nghỉ làm</span>
+                        </div>
+                        <div class="bieuDoTK__Sub--list-date">
+                            <ul>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                                <li>Ngày 20/11-Giời đến : 10h</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===============================END BIỂU ĐỒ NHÂN SỰ============================ -->
+    <!-- ====================FOOTER============================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-contain">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="footer__info">
+                            <h5>Cơ quan chủ quản: Học Viện Kỹ Thuật Mật Mã</h5>
+                            <p>Giám đốc học viện : PGT, TS Nguyễn Hồng Quang</p>
+                            <p>Địa chỉ: 141 đường Chiến Thắng, Tân Triều, Thanh Trì, Hà Nội</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="footer__location">
+                            <h6>Mạng xã hội:</h6>
+                            <div class="img_location">
+                                <a href=""><img src="./img/facebook-icon.png" alt=""></a>
+                                <a href=""><img src="./img/Google-plus-icon.png" alt=""></a>
+                                <a href=""><img src="./img/mail-icon.png" alt=""></a>
+                                <a href=""><img src="./img/youtube-icon.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====================END FOOTER============================== -->
+    <script>
+        // Radialize the colors
+        Highcharts.setOptions({
+            colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                return {
+                    radialGradient: {
+                        cx: 0.5,
+                        cy: 0.3,
+                        r: 0.7
+                    },
+                    stops: [
+                        [0, color],
+                        [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                    ]
+                };
+            })
+        });
+
+        // Build the chart
+        Highcharts.chart('Test', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Biểu đồ thống kê đi làm in Tháng, Năm'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        connectorColor: 'silver'
+                    }
+                }
+            },
+            series: [{
+                name: 'Share',
+                data: [
+                    { name: 'Đi làm đúng h', y: 61.41 },
+                    { name: 'Đi làm muộn', y: 11.84 },
+                    { name: 'Nghỉ làm', y: 10.85 },
+                ]
+            }]
+        });
+    </script>
+    <script>
+        $('.datepicker').datepicker();
+    </script>
+</body>
+
+</html>

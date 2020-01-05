@@ -1,0 +1,74 @@
+// ====================  SECTION NEWS CSS======================
+.section-news {
+  margin-top: 50px;
+  &--head {
+    text-align: center;
+    h2 {
+      font-size: 2.4rem;
+      color: $color-primary;
+      margin-bottom: 30px;
+    }
+  }
+  &--box--iteam {
+    margin-bottom: 30px;
+    padding-left: 5px;
+    a {
+      text-decoration: none;
+    }
+    .date {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: rgb(119, 119, 119);
+      margin-top: 10px;
+      display: block;
+      margin-bottom: 05px;
+    }
+    h4 {
+      font-size: 18px;
+      line-height: 24px;
+      color: rgb(34, 34, 34);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgb(238, 238, 238);
+      transition: all 300ms linear 0s;
+    }
+    p {
+      margin-bottom: 0px;
+      font-size: 1.4rem;
+      overflow: hidden;
+      height: 30px;
+      line-height: 30px;
+      text-align: justify;
+    }
+    &:hover,&:hover h4,&:hover .date{
+      color: $color-primary;
+    }
+  }
+}
+
+.footer {
+  background-color: rgba(43, 106, 199, 0.8);
+  height: 130px;
+  padding-top: 5px;
+  font-size: 1.6rem;
+  &-contain {
+    margin: 0 -15px;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: #ffffff;
+    height: 80px;
+  }
+  &__info {
+    margin-left: 15px;
+  }
+  &__location {
+    h6 {
+      font-size: 1.6rem;
+    }
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+// ====================END  SECTION NEWS CSS======================

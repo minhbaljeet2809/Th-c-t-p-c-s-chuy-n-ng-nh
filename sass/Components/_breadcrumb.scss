@@ -1,0 +1,57 @@
+.breadcrumb-area {
+  min-height: 200px;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  z-index: 1;
+  &__flex{
+    min-height: 200px;
+    align-items: center;
+    background: #04091e;
+    z-index: 1;
+    position: relative;
+  }
+  &__background{
+    width: 100%;
+    min-height: 200px;
+    background-image: url("../img/login_BG.png");
+    position: absolute;
+    top:0;
+    opacity: .6;
+    z-index: -1;
+  }
+  &__contain{
+      h2{
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 0px;
+        font-weight: bold;
+      }
+      &--link{
+        a{
+            font-size: 14px;
+            color: #fff;
+            margin-right: 32px;
+            position: relative;
+            text-decoration: none;
+            &:before{
+                content: "→";
+                font-family: 'Linearicons-Free';
+                position: absolute;
+                right: -25px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:last-child{
+                margin-right: 0px;
+                &:before{
+                    display: none;
+                }	
+            }
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+  }
+}

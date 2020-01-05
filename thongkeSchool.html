@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bb5e62a986.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Trang Chủ | Thống Kê | Nhân Sự</title>
+</head>
+
+<body>
+    <!-- ===============================BIỂU ĐỒ NHÂN SỰ============================ -->
+    <div class="infor-all">
+        <div class="bieuDoTK-contain">
+            <div class="container">
+                <div class="bieuDoTK-contain__title-text text-center">
+                    <h2>Thống Kê Phòng Ban</h2>
+                    <div class="input-area">
+                        <div class="input-group mb-3">
+                            <input type="month" class="form-control" placeholder=""
+                                aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary" type="button"
+                                    id="button-addon1">Button</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===============================END BIỂU ĐỒ NHÂN SỰ============================ -->
+        <script>
+            $(document).ready(function () {
+                $('#mytable').DataTable();
+            });
+            // Radialize the colors
+            Highcharts.setOptions({
+                colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
+                    return {
+                        radialGradient: {
+                            cx: 0.5,
+                            cy: 0.3,
+                            r: 0.7
+                        },
+                        stops: [
+                            [0, color],
+                            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+                        ]
+                    };
+                })
+            });
+
+            // Build the chart
+            Highcharts.chart('Test3', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Biểu đồ thống kê đi làm in Tháng, Năm'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: '%'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                            connectorColor: 'silver'
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Share',
+                    data: [
+                        { name: 'Đi làm đúng h', y: 61.41 },
+                        { name: 'Đi làm muộn', y: 11.84 },
+                        { name: 'Nghỉ làm', y: 10.85 },
+                    ]
+                }]
+            });
+        </script>
+</body>
+
+</html>

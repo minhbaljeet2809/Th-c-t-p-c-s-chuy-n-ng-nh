@@ -1,0 +1,109 @@
+.bieuDoTK-contain {
+  &__title-text {
+    position: relative;
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+    .input-area {
+      position: absolute;
+      top: 40px;
+      right: 100px;
+    }
+  }
+  .bieuDoTK__main {
+    font-size: 1.6rem;
+  }
+  .bieuDoTK__Sub {
+    justify-content: space-evenly;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    .color-d {
+      width: 40px;
+      height: 30px;
+      background-color: #444447;
+    }
+    span {
+      font-size: 1.6rem;
+      line-height: 30px;
+      margin-left: 20px;
+    }
+    &--ontime {
+      .color-d {
+        background-color: #70a9dd;
+      }
+    }
+    &--off {
+      .color-d {
+        background-color: #82df6f;
+      }
+    }
+    &--list-date {
+      margin-top: 5px;
+      overflow: auto;
+      height: 200px;
+      ul {
+        list-style: none;
+        padding-top: 10px;
+      }
+      li{
+        padding-left: 5px;
+        transition: all 0.4s;
+      }
+      li:hover{
+        background-color: #f7f6f6;
+      }
+    }
+  }
+}
+
+.List-phongBan {
+  margin: 30px auto;
+
+  .text--primary {
+    position: relative;
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+    .input-area {
+      position: absolute;
+      top: 40px;
+      right: 100px;
+    }
+  }
+  .infor-staff-area {
+    border-bottom: 1px solid;
+    padding-top: 30px;
+    margin-bottom: 30px;
+    .infor-staff-main {
+      .staff-info--img {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .infor-all {
+    .list-staff-thongke {
+      justify-content: space-around;
+      h4 {
+        padding-bottom: 5px;
+      }
+      .list-staff-thongke__ontime {
+        color: #70a9dd;
+      }
+      .list-staff-thongke__late {
+        color: #444447;
+      }
+      .list-staff-thongke__off {
+        color: #82df6f;
+      }
+    }
+    .list-table{
+      .text-primary{
+        h2{
+          color: #000;
+        }
+      }
+    }
+  }
+}

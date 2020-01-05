@@ -1,0 +1,20 @@
+.table-list{
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+}
+
+
+.table-list .input-area{
+  width: 350px;
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+.list-staff-table {
+  width: 70%;
+  margin: 0px auto;
+}
+.table-list--contain{
+  margin-top: 50px;
+}
