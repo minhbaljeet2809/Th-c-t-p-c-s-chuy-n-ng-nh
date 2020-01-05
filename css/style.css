@@ -553,16 +553,18 @@ body {
     padding-bottom: 30px; }
   .noiQuy-area__main {
     font-size: 1.6rem; }
-    .noiQuy-area__main .tab-content {
-      border: 1px solid rgba(0, 0, 0, 0.123);
-      padding: 10px;
-      margin-top: 10px;
-      text-align: justify; }
-    .noiQuy-area__main--download {
-      margin-top: 10px;
-      font-size: 1.6rem; }
-      .noiQuy-area__main--download .btn-download {
-        font-size: 1.6rem; }
+  .noiQuy-area__menu {
+    padding-top: 20px;
+    border: 1px solid; }
+    .noiQuy-area__menu h3 {
+      text-align: center; }
+    .noiQuy-area__menu--list .menu-list {
+      list-style: none;
+      padding-left: 20px; }
+      .noiQuy-area__menu--list .menu-list .list-iteam {
+        padding-top: 10px; }
+      .noiQuy-area__menu--list .menu-list .list-iteam a {
+        color: #000; }
 
 .PhongBan-contain {
   padding: 60px 0px;
